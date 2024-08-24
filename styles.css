@@ -53,11 +53,10 @@ header ul li a {
 }
 
 .hero {
-    background: url('hero-image.jpg') no-repeat center center/cover;
+    background: #35424a;
     color: #ffffff;
-    height: 400px;
+    padding: 100px 0;
     text-align: center;
-    padding-top: 150px;
 }
 
 .hero h2 {
@@ -81,6 +80,8 @@ header ul li a {
 
 .products {
     padding: 20px 0;
+    background-color: #ffffff;
+    border-top: #e8491d 3px solid;
 }
 
 .products h2 {
@@ -95,21 +96,18 @@ header ul li a {
 }
 
 .product {
-    background: #ffffff;
+    background: #f4f4f4;
     border: 1px solid #ddd;
     padding: 20px;
     margin: 10px;
-    width: 300px;
+    width: 30%;
     text-align: center;
-}
-
-.product img {
-    max-width: 100%;
-    height: auto;
+    border-radius: 5px;
 }
 
 .product h3 {
     margin-top: 15px;
+    color: #35424a;
 }
 
 .product p {
@@ -124,11 +122,13 @@ header ul li a {
 
 .about, .contact {
     padding: 20px 0;
+    background-color: #ffffff;
 }
 
 .about h2, .contact h2 {
     text-align: center;
     margin-bottom: 20px;
+    color: #35424a;
 }
 
 .about p, .contact p {
@@ -143,11 +143,16 @@ header ul li a {
     flex-direction: column;
     width: 50%;
     margin: 0 auto;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
 }
 
 .contact form label {
     margin-bottom: 5px;
     font-weight: bold;
+    color: #35424a;
 }
 
 .contact form input, .contact form textarea {
@@ -174,3 +179,4 @@ footer {
     padding: 10px 0;
     margin-top: 20px;
 }
+
