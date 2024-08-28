@@ -3,88 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Better Key - Unlock Convenience</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>TheBetterKey</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1>The Better Key</h1>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#products">Products</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+        <nav>
+            <div class="logo">
+                <a href="#home">
+                    <img src="images/thebetterkey-logo.png" alt="TheBetterKey Logo">
+                </a>
+            </div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
     <section id="home" class="hero">
-        <div class="container">
-            <h2>Unlock Convenience, Safety, and Peace of Mind</h2>
-            <p>Revolutionize the way you secure your home with our innovative door locks that work just like your car key—lock and unlock with the push of a button.</p>
-            <a href="#products" class="btn">Shop Now</a>
+        <div class="hero-content">
+            <h1>TheBetterKey</h1>
+            <p>Security Reimagined.</p>
+            <a href="#features" class="cta">Learn More</a>
+        </div>
+        <div class="product-image">
+            <img src="images/product-hero.png" alt="TheBetterKey Product">
         </div>
     </section>
 
-    <section id="products" class="products">
-        <div class="container">
-            <h2>Our Products</h2>
-            <div class="product-grid">
-                <div class="product">
-                    <h3>Smart Lock 1</h3>
-                    <p>The ultimate convenience with one-click locking and unlocking.</p>
-                    <span>$199.99</span>
-                </div>
-                <div class="product">
-                    <h3>Smart Lock 2</h3>
-                    <p>Advanced security features combined with easy access.</p>
-                    <span>$249.99</span>
-                </div>
-                <div class="product">
-                    <h3>Smart Lock 3</h3>
-                    <p>Designed for the elderly, this lock offers maximum convenience and safety.</p>
-                    <span>$229.99</span>
-                </div>
+    <section id="features" class="features">
+        <h2>Key Features</h2>
+        <div class="features-grid">
+            <div class="feature">
+                <h3>Smart Connectivity</h3>
+                <p>Unlock and lock your door seamlessly with advanced proximity sensing technology.</p>
+            </div>
+            <div class="feature">
+                <h3>Elegant Design</h3>
+                <p>Minimalistic design that complements any home decor, crafted with precision.</p>
+            </div>
+            <div class="feature">
+                <h3>Secure Access</h3>
+                <p>State-of-the-art encryption ensures your home is always safe.</p>
             </div>
         </div>
     </section>
 
     <section id="about" class="about">
-        <div class="container">
-            <h2>About Us</h2>
-            <p>At The Better Key, we believe in making life simpler and safer for everyone. Our mission is to provide innovative door locking solutions that combine convenience with security, giving you peace of mind whether you're at home or away.</p>
-        </div>
+        <h2>About TheBetterKey</h2>
+        <p>TheBetterKey is at the forefront of smart home security, merging cutting-edge technology with timeless design to create a product that redefines convenience and safety.</p>
     </section>
 
     <section id="contact" class="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <p>Have questions? We're here to help! Get in touch with us for any inquiries or support.</p>
-            <form>
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="message">Message</label>
-                <textarea id="message" name="message" required></textarea>
-                
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit" class="cta">Send Message</button>
+        </form>
     </section>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2024 The Better Key. All rights reserved.</p>
-        </div>
+        <p>&copy; 2024 TheBetterKey. All rights reserved.</p>
     </footer>
 
-    <script src="scripts.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
-
