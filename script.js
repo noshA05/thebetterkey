@@ -1,25 +1,18 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.querySelector('form');
-    
-    form.addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent the form from submitting in the traditional way
-        alert('Thank you for your message! We will get back to you soon.');
-        form.reset(); // Clear the form fields after submission
-    });
-    
-    // Example: Smooth scrolling for navigation links
-    const navLinks = document.querySelectorAll('nav ul li a');
-    
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(event) {
-            event.preventDefault();
-            const targetId = this.getAttribute('href').substring(1);
-            const targetSection = document.getElementById(targetId);
-            
-            window.scrollTo({
-                top: targetSection.offsetTop - 50, // Adjusts for any fixed header height
-                behavior: 'smooth'
-            });
-        });
-    });
+window.addEventListener('scroll', function() {
+    let scrollPosition = window.scrollY;
+    let word1 = document.getElementById('word1');
+    let word2 = document.getElementById('word2');
+    let word3 = document.getElementById('word3');
+
+    let scrollFactor = scrollPosition / 5;
+
+    word1.style.transform = `translateX(-${scrollFactor}px)`;
+    word2.style.transform = `translateY(${scrollFactor}px)`;
+    word3.style.transform = `translateX(${scrollFactor}px)`;
+
+    // Add fade-in effect based on scroll position
+    let opacityFactor = 1 - (scrollPosition / 500);
+    word1.style.opacity = opacityFactor;
+    word2.style.opacity = opacityFactor;
+    word3.style.opacity = opacityFactor;
 });
