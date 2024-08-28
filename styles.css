@@ -1,3 +1,4 @@
+/* Reset and Base Styling */
 * {
     margin: 0;
     padding: 0;
@@ -5,44 +6,46 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f9f9f9;
     color: #333;
+    line-height: 1.6;
 }
 
+/* Container */
 .container {
-    width: 80%;
+    width: 90%;
+    max-width: 1200px;
     margin: 0 auto;
     overflow: hidden;
 }
 
+/* Header */
 header {
-    background: #35424a;
+    background: #2c3e50;
     color: #ffffff;
-    padding-top: 30px;
-    min-height: 70px;
-    border-bottom: #e8491d 3px solid;
+    padding: 20px 0;
+    border-bottom: 4px solid #e74c3c;
 }
 
 header h1 {
     float: left;
     margin-top: 0;
+    font-size: 2rem;
+    letter-spacing: 2px;
 }
 
 header nav {
     float: right;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 header ul {
-    margin: 0;
-    padding: 0;
     list-style: none;
+    display: flex;
 }
 
 header ul li {
-    display: inline;
     margin-left: 20px;
 }
 
@@ -50,43 +53,57 @@ header ul li a {
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
+header ul li a:hover {
+    color: #e74c3c;
+}
+
+/* Hero Section */
 .hero {
-    background: #35424a;
+    background: #34495e;
     color: #ffffff;
     padding: 100px 0;
     text-align: center;
 }
 
 .hero h2 {
-    font-size: 2.5rem;
+    font-size: 3rem;
+    margin-bottom: 20px;
 }
 
 .hero p {
     font-size: 1.2rem;
-    margin: 20px 0;
+    margin-bottom: 30px;
 }
 
 .hero .btn {
     display: inline-block;
     color: #ffffff;
-    background: #e8491d;
-    padding: 10px 20px;
+    background: #e74c3c;
+    padding: 15px 30px;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 30px;
     font-weight: bold;
+    transition: background 0.3s ease;
 }
 
+.hero .btn:hover {
+    background: #c0392b;
+}
+
+/* Products Section */
 .products {
-    padding: 20px 0;
+    padding: 60px 0;
     background-color: #ffffff;
-    border-top: #e8491d 3px solid;
 }
 
 .products h2 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    color: #34495e;
 }
 
 .product-grid {
@@ -96,39 +113,51 @@ header ul li a {
 }
 
 .product {
-    background: #f4f4f4;
-    border: 1px solid #ddd;
-    padding: 20px;
+    background: #ecf0f1;
+    border: 1px solid #bdc3c7;
+    padding: 30px;
     margin: 10px;
     width: 30%;
     text-align: center;
-    border-radius: 5px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.product:hover {
+    transform: translateY(-10px);
 }
 
 .product h3 {
-    margin-top: 15px;
-    color: #35424a;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    color: #2c3e50;
 }
 
 .product p {
     font-size: 1rem;
-    margin: 10px 0;
+    margin-bottom: 20px;
+    color: #7f8c8d;
 }
 
 .product span {
+    display: block;
     font-weight: bold;
-    color: #e8491d;
+    font-size: 1.2rem;
+    color: #e74c3c;
 }
 
+/* About Section */
 .about, .contact {
-    padding: 20px 0;
-    background-color: #ffffff;
+    padding: 60px 0;
+    background-color: #f9f9f9;
 }
 
 .about h2, .contact h2 {
     text-align: center;
-    margin-bottom: 20px;
-    color: #35424a;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    color: #34495e;
 }
 
 .about p, .contact p {
@@ -136,46 +165,62 @@ header ul li a {
     width: 80%;
     margin: 0 auto;
     font-size: 1.2rem;
+    color: #7f8c8d;
 }
 
+/* Contact Section */
 .contact form {
     display: flex;
     flex-direction: column;
     width: 50%;
     margin: 0 auto;
-    background-color: #f4f4f4;
-    padding: 20px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    border: 1px solid #bdc3c7;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .contact form label {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     font-weight: bold;
-    color: #35424a;
+    color: #34495e;
 }
 
 .contact form input, .contact form textarea {
     margin-bottom: 20px;
-    padding: 10px;
-    border: 1px solid #ddd;
+    padding: 15px;
+    border: 1px solid #bdc3c7;
     border-radius: 5px;
+    font-size: 1rem;
 }
 
 .contact form button {
-    background: #e8491d;
+    background: #e74c3c;
     color: #ffffff;
-    padding: 10px;
+    padding: 15px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1.2rem;
+    transition: background 0.3s ease;
 }
 
+.contact form button:hover {
+    background: #c0392b;
+}
+
+/* Footer */
 footer {
-    background: #35424a;
+    background: #2c3e50;
     color: #ffffff;
     text-align: center;
-    padding: 10px 0;
+    padding: 20px 0;
     margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+    color: #bdc3c7;
 }
