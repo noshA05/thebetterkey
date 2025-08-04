@@ -1,5 +1,3 @@
-/ script.js
-
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
@@ -10,18 +8,16 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// Animate sections into view when scrolling
+// Animate sections when scrolling into view
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('show');
+      observer.unobserve(entry.target); // Trigger only once
     }
   });
-}, {
-  threshold: 0.1
-});
+}, { threshold: 0.1 });
 
-// Apply observer to all feature, about, and contact sections
-document.querySelectorAll('.feature, .about, .contact').forEach(section => {
-  observer.observe(section);
+document.querySelectorAll('.feature, .tier-card, .about, .contact').forEach(el => {
+  observer.observe(el);
 });
