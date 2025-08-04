@@ -35,53 +35,51 @@
       <h3>Why TheBetterKey?</h3>
       <div class="feature-grid">
         <div class="feature">
-          <h4>Proximity Unlock</h4>
-          <p>Unlock doors only when you're really close. Better privacy. More control.</p>
+          <h4>Accessible for Everyone</h4>
+          <p>Designed with simplicity in mind — whether you're a kid, an elder, or someone with arthritis, just press the button and push the door.</p>
         </div>
         <div class="feature">
-          <h4>Universal Design</h4>
-          <p>Works across home, office, and commercial setups.</p>
+          <h4>No Apps, No Networks</h4>
+          <p>Uses the same trusted technology found in car key fobs. No Wi-Fi, no internet, no fuss — just reliability.</p>
         </div>
         <div class="feature">
-          <h4>Easy Setup</h4>
-          <p>Just pair and go. No complicated installations or syncing.</p>
+          <h4>Minimalist Aesthetic</h4>
+          <p>Forget blinking lights and cluttered interfaces. TheBetterKey blends classic utility with subtle beauty in every tier.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Tiers Section -->
+  <!-- Immersive Tiered Experience -->
   <section id="tiers" class="tiers">
-    <div class="tier tier-left">
-      <div class="tier-text">
+    <div class="tier-panel tier-clip-on">
+      <div class="tier-content tier-left">
         <h2>Tier 1 — Clip-On</h2>
         <p>A simple snap-on module for your existing lock. No tools, no installation. Just clip and click.</p>
         <p>The most affordable way to enter the future. Great for renters or first-timers.</p>
       </div>
-      <div class="tier-img">
-        <img src="https://images.unsplash.com/photo-1605276374068-0b7e635a87a1" alt="Clip-On" />
+      <div class="tier-image tier-right">
+        <img src="https://via.placeholder.com/500x400.png?text=Clip-On+Mockup" alt="Clip-On Tier">
       </div>
     </div>
-
-    <div class="tier tier-right">
-      <div class="tier-img">
-        <img src="https://images.unsplash.com/photo-1611095968599-2e20a2a9febe" alt="Lock Replace" />
+    <div class="tier-panel tier-lock">
+      <div class="tier-image tier-left">
+        <img src="https://via.placeholder.com/500x400.png?text=Lock+Replacement+Mockup" alt="Lock Replacement Tier">
       </div>
-      <div class="tier-text">
+      <div class="tier-content tier-right">
         <h2>Tier 2 — Lock Replacement</h2>
         <p>Remove your old lock and install TheBetterKey system directly. Durable, sleek, and smarter.</p>
         <p>Perfect for homeowners or small businesses ready to upgrade security without overcomplicating it.</p>
       </div>
     </div>
-
-    <div class="tier tier-left">
-      <div class="tier-text">
+    <div class="tier-panel tier-door">
+      <div class="tier-content tier-left">
         <h2>Tier 3 — Full Door</h2>
-        <p>Our top-tier full-door solution. Everything is built in. Optimized for commercial buildings or full smart retrofits.</p>
-        <p>Smart access with tiered admin controls, hardware encryption, and seamless operation.</p>
+        <p>Our top-tier full-door solution. Everything is built-in. Optimized for commercial buildings or full-retrofits.</p>
+        <p>Smart access with tiered access control, biometric encryption, and seamless operation.</p>
       </div>
-      <div class="tier-img">
-        <img src="https://images.unsplash.com/photo-1616627786185-fb1d9db9de1f" alt="Full Door" />
+      <div class="tier-image tier-right">
+        <img src="https://via.placeholder.com/500x400.png?text=Full+Door+Mockup" alt="Full Door Tier">
       </div>
     </div>
   </section>
@@ -89,7 +87,7 @@
   <section id="about" class="about">
     <div class="container">
       <h3>About Us</h3>
-      <p>TheBetterKey is a vision for a smarter, more secure future—blending elegant design with practical engineering. We believe access should feel seamless, not clunky or outdated.</p>
+      <p>TheBetterKey is a vision for a simpler, more secure future—blending stripped-down design with practical engineering. No hidden screens. No clunky or outdated systems.</p>
     </div>
   </section>
 
@@ -107,5 +105,13 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    // Scroll-based logo fade
+    const logo = document.querySelector('.fade-out-on-scroll');
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+      logo.style.opacity = Math.max(1 - scrollY / 200, 0);
+    });
+  </script>
 </body>
 </html>
