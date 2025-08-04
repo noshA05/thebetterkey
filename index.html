@@ -7,8 +7,6 @@
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-  <script src="script.js"></script>
-
 <body>
   <header>
     <div class="container">
@@ -16,6 +14,7 @@
       <nav>
         <ul>
           <li><a href="#features">Features</a></li>
+          <li><a href="#tiers">Tiers</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -51,6 +50,26 @@
     </div>
   </section>
 
+  <section id="tiers" class="tiers">
+    <div class="container">
+      <h3>Choose Your Tier</h3>
+      <div class="tier-grid">
+        <div class="tier-card">
+          <h4>Basic</h4>
+          <p>Access limited key range. Great for personal homes.</p>
+        </div>
+        <div class="tier-card">
+          <h4>Pro</h4>
+          <p>Longer range + remote access. Ideal for small businesses.</p>
+        </div>
+        <div class="tier-card">
+          <h4>Enterprise</h4>
+          <p>Full system integration. Best for farms and construction zones.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="about" class="about">
     <div class="container">
       <h3>About Us</h3>
@@ -70,5 +89,12 @@
       <p>&copy; 2025 TheBetterKey. All rights reserved.</p>
     </div>
   </footer>
+
+  <script src="script.js"></script>
+  <script>
+    window.addEventListener('scroll', () => {
+      document.documentElement.style.setProperty('--scrollY', window.scrollY);
+    });
+  </script>
 </body>
 </html>
