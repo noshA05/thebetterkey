@@ -1,4 +1,128 @@
-/* Immersive Tier Panels */
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #111;
+  color: #f5f5f5;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 2rem;
+}
+
+/* Header */
+header {
+  background-color: #1a1a1a;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #444;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #cccccc;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #cccccc;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #0077ff;
+}
+
+/* Hero */
+.hero {
+  background-color: #1a1a1a;
+  text-align: center;
+  padding: 5rem 1rem;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  color: #e0e0e0;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  color: #ccc;
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+}
+
+.hero .btn {
+  background-color: #0077ff;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.hero .btn:hover {
+  background-color: #005fcc;
+}
+
+/* Features */
+.features {
+  background-color: #151515;
+  padding: 4rem 1rem;
+}
+
+.features h3 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.feature {
+  background-color: #1e1e1e;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.05);
+}
+
+.feature h4 {
+  color: #ddd;
+  margin-bottom: 0.5rem;
+}
+
+.feature p {
+  color: #bbb;
+}
+
+/* Tiered Scroll Sections */
 .tiers {
   margin: 0;
   padding: 0;
@@ -43,8 +167,61 @@
   background-color: #333333;
 }
 
-/* Scroll fade-in class */
+/* About + Contact */
+.about,
+.contact {
+  padding: 4rem 1rem;
+  background-color: #151515;
+}
+
+.about h3,
+.contact h3 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.about p,
+.contact p {
+  color: #ccc;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #1a1a1a;
+  color: #999;
+  font-size: 0.9rem;
+  border-top: 1px solid #333;
+}
+
+/* Animations */
 .show {
   opacity: 1 !important;
   transform: translateY(0) !important;
+}
+
+.tier-panel,
+.feature,
+.about,
+.contact {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
 }
