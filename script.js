@@ -1,27 +1,205 @@
-// script.js
+/* Global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-// Smooth scroll for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f9fafa;
+  color: #1a1a1a;
+  line-height: 1.6;
+}
 
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth'
-    });
-  });
-});
+html {
+  scroll-behavior: smooth;
+}
 
-// Simple animation when scrolling into view (optional)
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('show');
-    }
-  });
-}, {
-  threshold: 0.1
-});
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 2rem;
+}
 
-document.querySelectorAll('.feature, .about, .contact').forEach(section => {
-  observer.observe(section);
-});
+/* Header */
+header {
+  background-color: #ffffff;
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #113355;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: #0077cc;
+}
+
+/* Hero Section */
+.hero {
+  background-color: #eef3f8;
+  text-align: center;
+  padding: 5rem 1rem;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #002244;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+}
+
+.hero .btn {
+  display: inline-block;
+  background-color: #0077ff;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.hero .btn:hover {
+  background-color: #005fcc;
+}
+
+/* Features Section */
+.features {
+  background-color: #ffffff;
+  padding: 4rem 1rem;
+}
+
+.features h3 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  color: #113355;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.feature {
+  background-color: #f4f8fb;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s ease;
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+}
+
+.feature h4 {
+  margin-bottom: 0.5rem;
+  color: #003366;
+}
+
+.feature p {
+  color: #444;
+  font-size: 0.95rem;
+}
+
+/* About Section */
+.about {
+  padding: 4rem 1rem;
+  background-color: #f9f9f9;
+}
+
+.about h3 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #113355;
+}
+
+.about p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #444;
+  font-size: 1rem;
+}
+
+/* Contact Section */
+.contact {
+  padding: 4rem 1rem;
+}
+
+.contact h3 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #113355;
+}
+
+.contact p {
+  text-align: center;
+  font-size: 1rem;
+  color: #444;
+}
+
+.contact a {
+  color: #0077cc;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #f1f1f1;
+  color: #777;
+  font-size: 0.9rem;
+  border-top: 1px solid #ccc;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 2rem;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+}
