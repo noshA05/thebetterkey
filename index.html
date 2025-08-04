@@ -10,7 +10,7 @@
 <body>
   <header>
     <div class="container">
-      <h1>TheBetterKey</h1>
+      <h1 class="fade-out-on-scroll">TheBetterKey</h1>
       <nav>
         <ul>
           <li><a href="#features">Features</a></li>
@@ -26,7 +26,7 @@
     <div class="container">
       <h2>Secure Access, Reinvented.</h2>
       <p>A smarter way to unlock your world. TheBetterKey is the future of digital key fobs.</p>
-      <a href="#about" class="btn">Learn More</a>
+      <a href="#tiers" class="btn">Explore Tiers</a>
     </div>
   </section>
 
@@ -50,22 +50,27 @@
     </div>
   </section>
 
+  <!-- Immersive Tiered Experience -->
   <section id="tiers" class="tiers">
-    <div class="container">
-      <h3>Choose Your Tier</h3>
-      <div class="tier-grid">
-        <div class="tier-card">
-          <h4>Basic</h4>
-          <p>Access limited key range. Great for personal homes.</p>
-        </div>
-        <div class="tier-card">
-          <h4>Pro</h4>
-          <p>Longer range + remote access. Ideal for small businesses.</p>
-        </div>
-        <div class="tier-card">
-          <h4>Enterprise</h4>
-          <p>Full system integration. Best for farms and construction zones.</p>
-        </div>
+    <div class="tier-panel tier-basic">
+      <div class="tier-content">
+        <h2>Basic Tier</h2>
+        <p>Snap-on module. Lightweight. Meant for single-residence use.</p>
+        <p>Perfect for people who want smart access to their own front door without any network complications.</p>
+      </div>
+    </div>
+    <div class="tier-panel tier-pro">
+      <div class="tier-content">
+        <h2>Pro Tier</h2>
+        <p>Pro is a screw-in device. Secure and stable — great for offices and shared spaces.</p>
+        <p>Designed for environments that need remote access, user switching, and logs.</p>
+      </div>
+    </div>
+    <div class="tier-panel tier-enterprise">
+      <div class="tier-content">
+        <h2>Enterprise Tier</h2>
+        <p>This is the full door. Integrated entry systems for commercial buildings, farms, or construction zones.</p>
+        <p>Manage hundreds of keys, zones, and security levels from a centralized system.</p>
       </div>
     </div>
   </section>
@@ -92,8 +97,12 @@
 
   <script src="script.js"></script>
   <script>
+    // Scroll-based logo fade
+    const logo = document.querySelector('.fade-out-on-scroll');
     window.addEventListener('scroll', () => {
-      document.documentElement.style.setProperty('--scrollY', window.scrollY);
+      const scrollY = window.scrollY;
+      document.documentElement.style.setProperty('--scrollY', scrollY);
+      logo.style.opacity = Math.max(1 - scrollY / 200, 0);
     });
   </script>
 </body>
