@@ -1,117 +1,284 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TheBetterKey</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TheBetterKey — Secure access. Zero fuss.</title>
+
+  <!-- SEO / Social -->
+  <meta name="description" content="Car-fob simplicity for doors. Offline by design. Built for real people — kids, elders, busy hands." />
+  <meta property="og:title" content="TheBetterKey — Secure access. Zero fuss." />
+  <meta property="og:description" content="Car-fob simplicity for doors. Offline by design." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0f0b08" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1 class="fade-out-on-scroll">TheBetterKey</h1>
-      <nav>
-        <ul>
-          <li><a href="#features">Features</a></li>
-          <li><a href="#tiers">Tiers</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+  <!-- Top Nav -->
+  <header class="nav">
+    <div class="container nav__row">
+      <a href="#top" class="logo"><span class="text-accent">the</span>BetterKey</a>
+      <nav class="nav__links">
+        <a href="#features">Features</a>
+        <a href="#tiers">Tiers</a>
+        <a href="#how">How it works</a>
+        <a href="#principles">Principles</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#contact">Contact</a>
       </nav>
+      <a class="btn btn--accent btn--sm hide-sm" href="mailto:info@thebetterkey.com?subject=Join%20the%20build">Join the build</a>
     </div>
   </header>
 
-  <section class="hero">
+  <!-- Hero -->
+  <section id="top" class="hero">
+    <div class="bg-texture"></div>
     <div class="container">
-      <h2>Secure Access, Reinvented.</h2>
-      <p>A simpler way to unlock your world. TheBetterKey is not your average smart lock. It’s a better key, for real people.</p>
-      <a href="#tiers" class="btn">Explore Tiers</a>
+      <span class="chip">Offline • Accessible • Minimal</span>
+      <h1 class="hero__title" data-reveal>Secure access. <span class="text-accent">Zero fuss.</span></h1>
+      <p class="lead" data-reveal>Car-fob simplicity for doors. Offline by design. Built for real people — kids, elders, busy hands.</p>
+      <div class="hero__cta" data-reveal>
+        <a href="#tiers" class="btn btn--accent">Explore tiers</a>
+        <a href="https://instagram.com/ahsonmade" class="btn btn--outline" target="_blank" rel="noopener">Follow the build</a>
+      </div>
     </div>
   </section>
 
-  <section id="features" class="features">
+  <!-- Features -->
+  <section id="features" class="section">
     <div class="container">
-      <h3>Why TheBetterKey?</h3>
-      <div class="feature-grid">
-        <div class="feature">
-          <h4>Accessible for Everyone</h4>
-          <p>Designed with simplicity in mind — whether you're a kid, an elder, or someone with arthritis, just press the button and push the door.</p>
+      <header class="section__hdr">
+        <h2>Designed for the 99% use-case</h2>
+        <p class="muted">No apps. No Wi-Fi. No learning curve.</p>
+        <div class="rule rule--cream"></div>
+      </header>
+
+      <div class="grid grid--3">
+        <article class="card" data-reveal>
+          <div class="icon-pill"><svg viewBox="0 0 24 24" class="ico"><circle cx="12" cy="5" r="2"/><path d="M3 9h18M12 9v8M9 22l3-5 3 5"/></svg></div>
+          <h3>Accessible for everyone</h3>
+          <p class="muted">Big button, clear feedback. Works for kids, elders, and anyone with limited dexterity.</p>
+        </article>
+
+        <article class="card" data-reveal>
+          <div class="icon-pill"><svg viewBox="0 0 24 24" class="ico"><path d="M2 12h20M4 8l4 8m8-8 4 8"/></svg></div>
+          <h3>Offline by design</h3>
+          <p class="muted">Same RF class as car key fobs. Reliable, fast, private — even when the internet is down.</p>
+        </article>
+
+        <article class="card" data-reveal>
+          <div class="icon-pill"><svg viewBox="0 0 24 24" class="ico"><path d="M3 6h18M6 10h12M9 14h6M11 18h2"/></svg></div>
+          <h3>Minimal aesthetic</h3>
+          <p class="muted">No screens. No blinking LEDs. Just a calm, considered object.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tiers -->
+  <section id="tiers" class="section">
+    <div class="container">
+      <header class="section__hdr">
+        <h2>Pick your level — clip-on to full door</h2>
+        <p class="muted">Each tier keeps the same core simplicity.</p>
+        <div class="rule rule--cream"></div>
+      </header>
+
+      <div class="tier-row" data-reveal>
+        <div class="card">
+          <div class="row-header">
+            <h3>Tier 1 — Clip-On</h3>
+            <span class="chip chip--small">BetterKey</span>
+          </div>
+          <p class="muted">Snap-on module for your existing deadbolt. No tools required. Press to unlock, push to enter.</p>
+          <ul class="bullets">
+            <li>Affordable entry</li>
+            <li>Renters welcome</li>
+            <li>Minutes to install</li>
+          </ul>
         </div>
-        <div class="feature">
-          <h4>No Apps, No Networks</h4>
-          <p>Uses the same trusted technology found in car key fobs. No Wi-Fi, no internet, no fuss — just reliability.</p>
-        </div>
-        <div class="feature">
-          <h4>Minimalist Aesthetic</h4>
-          <p>Forget blinking lights and cluttered interfaces. TheBetterKey blends classic utility with subtle beauty in every tier.</p>
+        <div class="ph-img" data-parallax="6">
+          <div class="ph-img__label">Clip-On Mockup</div>
         </div>
       </div>
+
+      <div class="tier-row tier-row--rev" data-reveal>
+        <div class="card">
+          <div class="row-header">
+            <h3>Tier 2 — Lock Replacement</h3>
+            <span class="chip chip--small">BetterKey</span>
+          </div>
+          <p class="muted">Full deadbolt replacement with BetterKey internals. Durable housing; clean, modern look.</p>
+          <ul class="bullets">
+            <li>Homeowner upgrade</li>
+            <li>Solid metal chassis</li>
+            <li>Improved weather-sealing</li>
+          </ul>
+        </div>
+        <div class="ph-img" data-parallax="6">
+          <div class="ph-img__label">Lock Replacement Mockup</div>
+        </div>
+      </div>
+
+      <div class="tier-row" data-reveal>
+        <div class="card">
+          <div class="row-header">
+            <h3>Tier 3 — Full Door</h3>
+            <span class="chip chip--small">BetterKey</span>
+          </div>
+          <p class="muted">Everything integrated for commercial or full retrofit. Seamless access control with expansion options.</p>
+          <ul class="bullets">
+            <li>Best performance</li>
+            <li>Access tiers & audit</li>
+            <li>Serviceable components</li>
+          </ul>
+        </div>
+        <div class="ph-img" data-parallax="6">
+          <div class="ph-img__label">Full Door Mockup</div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Immersive Tiered Experience -->
-  <section id="tiers" class="tiers">
-    <div class="tier-panel tier-clip-on">
-      <div class="tier-content tier-left">
-        <h2>Tier 1 — Clip-On</h2>
-        <p>A simple snap-on module for your existing lock. No tools, no installation. Just clip and click.</p>
-        <p>The most affordable way to enter the future. Great for renters or first-timers.</p>
-      </div>
-      <div class="tier-image tier-right">
-        <img src="https://via.placeholder.com/500x400.png?text=Clip-On+Mockup" alt="Clip-On Tier">
-      </div>
-    </div>
-    <div class="tier-panel tier-lock">
-      <div class="tier-image tier-left">
-        <img src="https://via.placeholder.com/500x400.png?text=Lock+Replacement+Mockup" alt="Lock Replacement Tier">
-      </div>
-      <div class="tier-content tier-right">
-        <h2>Tier 2 — Lock Replacement</h2>
-        <p>Remove your old lock and install TheBetterKey system directly. Durable, sleek, and smarter.</p>
-        <p>Perfect for homeowners or small businesses ready to upgrade security without overcomplicating it.</p>
-      </div>
-    </div>
-    <div class="tier-panel tier-door">
-      <div class="tier-content tier-left">
-        <h2>Tier 3 — Full Door</h2>
-        <p>Our top-tier full-door solution. Everything is built-in. Optimized for commercial buildings or full-retrofits.</p>
-        <p>Smart access with tiered access control, biometric encryption, and seamless operation.</p>
-      </div>
-      <div class="tier-image tier-right">
-        <img src="https://via.placeholder.com/500x400.png?text=Full+Door+Mockup" alt="Full Door Tier">
-      </div>
-    </div>
-  </section>
-
-  <section id="about" class="about">
+  <!-- How it works -->
+  <section id="how" class="section">
     <div class="container">
-      <h3>About Us</h3>
-      <p>TheBetterKey is a vision for a simpler, more secure future—blending stripped-down design with practical engineering. No hidden screens. No clunky or outdated systems.</p>
+      <header class="section__hdr">
+        <h2>Three steps. That’s it.</h2>
+        <p class="muted">Deliberately boring — because reliability should be.</p>
+        <div class="rule rule--cream"></div>
+      </header>
+
+      <div class="grid grid--3">
+        <article class="card" data-reveal>
+          <div class="icon-pill"><svg class="ico" viewBox="0 0 24 24"><path d="M3 12h18M7 8h10M9 16h6"/></svg></div>
+          <div class="step">Step 1</div>
+          <h3>Approach</h3>
+          <p class="muted">Receiver wakes as you arrive. No phone needed.</p>
+        </article>
+        <article class="card" data-reveal>
+          <div class="icon-pill"><svg class="ico" viewBox="0 0 24 24"><path d="M12 2a5 5 0 0 1 5 5v3h-2V7a3 3 0 1 0-6 0v3H7V7a5 5 0 0 1 5-5Z"/><rect x="7" y="10" width="10" height="12" rx="2"/></svg></div>
+          <div class="step">Step 2</div>
+          <h3>Press</h3>
+          <p class="muted">Large tactile button triggers secure RF handshake.</p>
+        </article>
+        <article class="card" data-reveal>
+          <div class="icon-pill"><svg class="ico" viewBox="0 0 24 24"><path d="M12 2l7 6-7 6-7-6 7-6Z"/><path d="M5 14h14v8H5z"/></svg></div>
+          <div class="step">Step 3</div>
+          <h3>Enter</h3>
+          <p class="muted">Bolt actuates. You push the door. Done.</p>
+        </article>
+      </div>
     </div>
   </section>
 
-  <section id="contact" class="contact">
+  <!-- Principles -->
+  <section id="principles" class="section">
     <div class="container">
-      <h3>Contact</h3>
-      <p>Have a question or want to collaborate? Reach out via <a href="mailto:info@thebetterkey.com">info@thebetterkey.com</a></p>
+      <header class="section__hdr">
+        <h2>Constraints that keep the product honest</h2>
+        <div class="rule rule--cream"></div>
+      </header>
+
+      <div class="grid grid--4">
+        <div class="card" data-reveal><div class="icon-pill"></div><h3>Offline-first</h3></div>
+        <div class="card" data-reveal><div class="icon-pill"></div><h3>Fail-safe manual use</h3></div>
+        <div class="card" data-reveal><div class="icon-pill"></div><h3>Replaceable battery</h3></div>
+        <div class="card" data-reveal><div class="icon-pill"></div><h3>No data harvest</h3></div>
+      </div>
     </div>
   </section>
 
-  <footer>
+  <!-- Roadmap -->
+  <section id="roadmap" class="section">
     <div class="container">
-      <p>&copy; 2025 TheBetterKey. All rights reserved.</p>
+      <header class="section__hdr">
+        <h2>From idea to in-hand</h2>
+        <div class="rule rule--cream"></div>
+      </header>
+
+      <ol class="timeline">
+        <li class="timeline__item" data-reveal>
+          <div class="timeline__dot"></div>
+          <div class="card">
+            <div class="eyebrow">Aug–Sep 2025</div>
+            <div>CAD + electronics research; print V1 shell</div>
+          </div>
+        </li>
+        <li class="timeline__item" data-reveal>
+          <div class="timeline__dot"></div>
+          <div class="card">
+            <div class="eyebrow">Oct 2025</div>
+            <div>Field tests on rentals & dorm doors</div>
+          </div>
+        </li>
+        <li class="timeline__item" data-reveal>
+          <div class="timeline__dot"></div>
+          <div class="card">
+            <div class="eyebrow">Nov–Dec 2025</div>
+            <div>V2 mechanism; improved weather-sealing</div>
+          </div>
+        </li>
+        <li class="timeline__item" data-reveal>
+          <div class="timeline__dot"></div>
+          <div class="card">
+            <div class="eyebrow">Feb 2025</div>
+            <div>Working prototype demo (goal)</div>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <div class="container grid grid--2">
+      <div>
+        <header class="section__hdr">
+          <h2>Want to test or collaborate?</h2>
+          <p class="muted">Building this in public. RF, PCBs, mech design, or content — let’s talk.</p>
+          <div class="rule rule--cream"></div>
+        </header>
+        <div class="cta-row">
+          <a class="btn btn--accent" href="mailto:info@thebetterkey.com?subject=Collab%20with%20TheBetterKey">Email me</a>
+          <a class="btn btn--outline" href="https://instagram.com/ahsonmade" target="_blank" rel="noopener">@ahsonmade</a>
+        </div>
+      </div>
+
+      <!-- Waitlist form (Formspree) -->
+      <form class="card form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" data-reveal>
+        <h3>Join the waitlist</h3>
+        <label>
+          <span>Name</span>
+          <input type="text" name="name" placeholder="Fatima Ali" required />
+        </label>
+        <label>
+          <span>Email</span>
+          <input type="email" name="email" placeholder="you@example.com" required />
+        </label>
+        <button type="submit" class="btn btn--accent">Notify me</button>
+        <p class="muted xs">We’ll never share your info. <a href="mailto:info@thebetterkey.com">Unsubscribe anytime.</a></p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__row">
+      <p class="muted">© <span id="year"></span> TheBetterKey</p>
+      <div class="footer__links">
+        <a href="#features">Features</a>
+        <a href="#tiers">Tiers</a>
+        <a href="#how">How it works</a>
+        <a href="#roadmap">Roadmap</a>
+      </div>
     </div>
   </footer>
 
   <script src="script.js"></script>
-  <script>
-    // Scroll-based logo fade
-    const logo = document.querySelector('.fade-out-on-scroll');
-    window.addEventListener('scroll', () => {
-      const scrollY = window.scrollY;
-      logo.style.opacity = Math.max(1 - scrollY / 200, 0);
-    });
-  </script>
 </body>
 </html>
