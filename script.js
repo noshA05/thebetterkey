@@ -1,20 +1,26 @@
-// Fade-in on scroll
-const fadeInElements = document.querySelectorAll('.fade-in');
+// Year in footer
+document.getElementById('year').textContent = new Date().getFullYear();
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      observer.unobserve(entry.target);
+// Reveal on scroll
+const revealEls = document.querySelectorAll('[data-reveal]');
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('revealed');
+      io.unobserve(e.target);
     }
   });
-}, { threshold: 0.2 });
+}, { threshold: 0.15 });
+revealEls.forEach(el => io.observe(el));
 
-fadeInElements.forEach(el => observer.observe(el));
-
-// Scroll logo fade
-const logo = document.querySelector('.fade-out-on-scroll');
-window.addEventListener('scroll', () => {
-  const scrollY = window.scrollY;
-  logo.style.opacity = Math.max(1 - scrollY / 150, 0);
-});
+// Lightweight parallax (translateY based on scroll)
+const pxEls = Array.from(document.querySelectorAll('[data-parallax]'));
+function onScroll() {
+  const scrollY = window.scrollY || window.pageYOffset;
+  pxEls.forEach(el => {
+    const strength = Number(el.getAttribute('data-parallax')) || 8; // px per 100px scroll
+    el.style.transform = `translateY(${(scrollY * strength) / 100}px)`;
+  });
+}
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
