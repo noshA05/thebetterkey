@@ -13,16 +13,22 @@ const io = new IntersectionObserver((entries) => {
 }, { threshold: 0.15 });
 revealEls.forEach(el => io.observe(el));
 
-// Lightweight parallax (translateY based on scroll)
+// Lightweight parallax (disabled on small screens to avoid weird tier behavior)
+function parallaxEnabled() { return window.matchMedia('(min-width: 780px)').matches; }
 const pxEls = Array.from(document.querySelectorAll('[data-parallax]'));
 function onScroll() {
+  if (!parallaxEnabled()) {
+    pxEls.forEach(el => el.style.transform = 'none');
+    return;
+  }
   const y = window.scrollY || window.pageYOffset;
   pxEls.forEach(el => {
-    const strength = Number(el.getAttribute('data-parallax')) || 6; // px per 100px scroll
+    const strength = Number(el.getAttribute('data-parallax')) || 6;
     el.style.transform = `translateY(${(y * strength) / 100}px)`;
   });
 }
 window.addEventListener('scroll', onScroll, { passive: true });
+window.addEventListener('resize', onScroll);
 onScroll();
 
 // Waitlist form: AJAX submit with success / error message (no redirect)
