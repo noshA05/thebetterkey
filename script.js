@@ -1,19 +1,21 @@
 // Footer year
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// Mobile menu
+// Mobile menu (no 'hidden' attr reliance)
 const burger = document.querySelector('.nav__burger');
 const mobileMenu = document.getElementById('mobileMenu');
 if (burger && mobileMenu) {
+  const closeMenu = () => { mobileMenu.classList.remove('open'); mobileMenu.setAttribute('aria-hidden','true'); burger.setAttribute('aria-expanded','false'); };
+  const openMenu  = () => { mobileMenu.classList.add('open'); mobileMenu.setAttribute('aria-hidden','false'); burger.setAttribute('aria-expanded','true'); };
+
   burger.addEventListener('click', () => {
-    const open = !mobileMenu.hasAttribute('hidden');
-    if (open) mobileMenu.setAttribute('hidden', '');
-    else mobileMenu.removeAttribute('hidden');
-    burger.setAttribute('aria-expanded', String(!open));
+    mobileMenu.classList.contains('open') ? closeMenu() : openMenu();
   });
-  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-    mobileMenu.setAttribute('hidden',''); burger.setAttribute('aria-expanded','false');
-  }));
+  // Close on link click or escape
+  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+  window.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+  // Ensure closed on resize up
+  window.addEventListener('resize', () => { if (window.innerWidth >= 920) closeMenu(); });
 }
 
 // Reveal on scroll
@@ -26,21 +28,6 @@ const io = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.15 });
 document.querySelectorAll('[data-reveal]').forEach(el => io.observe(el));
-
-// Parallax (desktop only to avoid mobile jank)
-const pxEls = Array.from(document.querySelectorAll('[data-parallax]'));
-function parallaxOK(){ return window.matchMedia('(min-width: 980px)').matches; }
-function onScroll(){
-  if(!parallaxOK()){ pxEls.forEach(el => el.style.transform='none'); return; }
-  const y = window.scrollY || window.pageYOffset;
-  pxEls.forEach(el => {
-    const s = Number(el.getAttribute('data-parallax')) || 6;
-    el.style.transform = `translateY(${(y * s)/100}px)`;
-  });
-}
-window.addEventListener('scroll', onScroll, { passive:true });
-window.addEventListener('resize', onScroll);
-onScroll();
 
 // Waitlist AJAX (no redirect)
 const form = document.getElementById('waitlist');
