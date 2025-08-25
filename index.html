@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>TheBetterKey — Secure access. Zero fuss.</title>
   <meta name="description" content="Car-fob simplicity for doors. Offline by design. Built for real people — kids, elders, busy hands." />
-  <meta name="theme-color" content="#245F73" />
+  <meta name="theme-color" content="#14533A" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -16,7 +16,7 @@
   <!-- NAV -->
   <header class="nav">
     <div class="container nav__row">
-      <a href="#top" class="logo">the<span class="accent-brown">BetterKey</span></a>
+      <a href="#top" class="logo">the<span class="accent-copper">BetterKey</span></a>
 
       <nav class="nav__links">
         <a href="#features">Features</a>
@@ -35,8 +35,8 @@
     </div>
   </header>
 
-  <!-- MOBILE MENU -->
-  <nav class="mobile-menu" id="mobileMenu" hidden>
+  <!-- MOBILE MENU (closed by default) -->
+  <nav class="mobile-menu" id="mobileMenu" aria-hidden="true">
     <a href="#features">Features</a>
     <a href="#tiers">Tiers</a>
     <a href="#how">How it works</a>
@@ -47,15 +47,15 @@
   </nav>
 
   <!-- HERO -->
-  <section id="top" class="hero hero--blue">
+  <section id="top" class="hero hero--moss">
     <div class="hero__bg"></div>
     <div class="container hero__inner">
       <span class="chip">Offline • Accessible • Minimal</span>
-      <h1 class="hero__title" data-reveal>Secure access. <span class="accent-cream">Zero fuss.</span></h1>
+      <h1 class="hero__title" data-reveal>Secure access. <span class="accent-linen">Zero fuss.</span></h1>
       <p class="lead" data-reveal>Car-fob simplicity for doors. Offline by design. Built for real people — kids, elders, busy hands.</p>
 
       <div class="hero__cta" data-reveal>
-        <a href="#tiers" class="btn btn--cream">Explore tiers</a>
+        <a href="#tiers" class="btn btn--linen">Explore tiers</a>
         <a href="https://instagram.com/ahsonmade" target="_blank" rel="noopener" class="btn btn--outline">
           <svg class="ico-ig" viewBox="0 0 24 24" aria-hidden="true">
             <rect x="3" y="3" width="18" height="18" rx="5" ry="5"/>
@@ -68,13 +68,13 @@
     </div>
   </section>
 
-  <!-- FEATURES: deep-blue band, white cards -->
-  <section id="features" class="section theme-blue">
+  <!-- FEATURES -->
+  <section id="features" class="section theme-stone">
     <div class="container">
       <header class="section__hdr">
         <h2>No apps. No Wi-Fi. No nonsense.</h2>
         <p class="muted">Everything you need, nothing you don’t.</p>
-        <div class="rule rule--light"></div>
+        <div class="rule"></div>
       </header>
 
       <div class="grid grid--3">
@@ -94,8 +94,8 @@
     </div>
   </section>
 
-  <!-- TIERS: warm cream band; alternating right–left–right -->
-  <section id="tiers" class="section theme-cream">
+  <!-- TIERS -->
+  <section id="tiers" class="section theme-linen">
     <div class="container">
       <header class="section__hdr">
         <h2>Pick your level — clip-on to full door</h2>
@@ -111,12 +111,12 @@
           <ul class="bullets"><li>Affordable entry</li><li>Renters welcome</li><li>Minutes to install</li></ul>
           <ul class="specs"><li>≤ 5 min install</li><li>CR2032</li><li>Weather-resist</li></ul>
         </div>
-        <figure class="tier__art plate" data-parallax="5"><figcaption>Clip-On Mockup</figcaption></figure>
+        <figure class="tier__art plate"><figcaption>Clip-On Mockup</figcaption></figure>
       </article>
 
       <!-- LEFT -->
       <article class="tier tier--left" data-reveal>
-        <figure class="tier__art plate" data-parallax="5"><figcaption>Lock Replacement Mockup</figcaption></figure>
+        <figure class="tier__art plate"><figcaption>Lock Replacement Mockup</figcaption></figure>
         <div class="tier__text card">
           <header class="tier__head"><span class="tier__num">02</span><h3>Tier 2 — Lock Replacement</h3></header>
           <p class="muted">Full deadbolt replacement with BetterKey internals. Durable housing; clean, modern look.</p>
@@ -133,12 +133,12 @@
           <ul class="bullets"><li>Best performance</li><li>Access tiers & audit</li><li>Serviceable components</li></ul>
           <ul class="specs"><li>Pro install</li><li>Modular service</li><li>Audit ready</li></ul>
         </div>
-        <figure class="tier__art plate" data-parallax="5"><figcaption>Full Door Mockup</figcaption></figure>
+        <figure class="tier__art plate"><figcaption>Full Door Mockup</figcaption></figure>
       </article>
     </div>
   </section>
 
-  <!-- HOW IT WORKS -->
+  <!-- HOW -->
   <section id="how" class="section">
     <div class="container">
       <header class="section__hdr">
@@ -155,8 +155,8 @@
     </div>
   </section>
 
-  <!-- PRINCIPLES: brown band -->
-  <section id="principles" class="section theme-brown">
+  <!-- PRINCIPLES -->
+  <section id="principles" class="section theme-copper">
     <div class="container">
       <header class="section__hdr">
         <h2>Constraints that keep the product honest</h2>
@@ -173,7 +173,7 @@
   </section>
 
   <!-- ROADMAP -->
-  <section id="roadmap" class="section theme-cream">
+  <section id="roadmap" class="section theme-linen">
     <div class="container">
       <header class="section__hdr">
         <h2>From idea to in-hand</h2>
@@ -181,10 +181,10 @@
       </header>
 
       <ol class="timeline">
-        <li class="timeline__item" data-reveal><div class="timeline__dot"></div><div class="card card--soft"><div class="eyebrow accent-blue">Aug–Sep 2025</div><div>CAD + electronics research; print V1 shell</div></div></li>
-        <li class="timeline__item" data-reveal><div class="timeline__dot"></div><div class="card card--soft"><div class="eyebrow accent-blue">Oct 2025</div><div>Field tests on rentals & dorm doors</div></div></li>
-        <li class="timeline__item" data-reveal><div class="timeline__dot"></div><div class="card card--soft"><div class="eyebrow accent-blue">Nov–Dec 2025</div><div>V2 mechanism; improved weather-sealing</div></div></li>
-        <li class="timeline__item" data-reveal><div class="timeline__dot"></div><div class="card card--soft"><div class="eyebrow accent-blue">Feb 2025</div><div>Working prototype demo (goal)</div></div></li>
+        <li class="timeline__item" data-reveal><div class="timeline__dot"></div><div class="card card--soft"><div class="eyebrow accent-moss">Aug–Sep 2025</div><div>CAD + electronics research; print V1 shell</div></div></li>
+        <li class="timeline__item" data-reveal><div class="timeline__dot"></div><div class="card card--soft"><div class="eyebrow accent-moss">Oct 2025</div><div>Field tests on rentals & dorm doors</div></div></li>
+        <li class="timeline__item" data-reveal><div class="timeline__dot"></div><div class="card card--soft"><div class="eyebrow accent-moss">Nov–Dec 2025</div><div>V2 mechanism; improved weather-sealing</div></div></li>
+        <li class="timeline__item" data-reveal><div class="timeline__dot"></div><div class="card card--soft"><div class="eyebrow accent-moss">Feb 2025</div><div>Working prototype demo (goal)</div></div></li>
       </ol>
     </div>
   </section>
@@ -201,7 +201,7 @@
 
         <div class="cta-row">
           <a class="btn btn--primary" href="#waitlist">Get first access</a>
-          <a class="btn btn--outline" href="https://instagram.com/ahsonmade" target="_blank" rel="noopener">
+          <a class="btn btn--outline-dark" href="https://instagram.com/ahsonmade" target="_blank" rel="noopener">
             <svg class="ico-ig" viewBox="0 0 24 24" aria-hidden="true">
               <rect x="3" y="3" width="18" height="18" rx="5" ry="5"/>
               <circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.2"/>
@@ -211,7 +211,6 @@
         </div>
       </div>
 
-      <!-- No-redirect waitlist -->
       <form id="waitlist" class="card form" action="https://formspree.io/f/xkgvwqza" method="POST" data-reveal>
         <h3>Get first access</h3>
         <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
